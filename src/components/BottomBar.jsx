@@ -149,11 +149,10 @@ export default function BottomBar({ activePage, setActivePage, onOpenJoinModal }
   ];
 
   const handleNavClick = (pageId) => {
+    setIsMenuOpen(false);
     if (setActivePage) {
       setActivePage(pageId);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
-    setIsMenuOpen(false);
   };
 
   // Strictly mutually-exclusive active state per breakpoint so More & hidden tabs never collide

@@ -69,6 +69,18 @@ export default function App() {
     return () => window.removeEventListener('popstate', syncFromLocation);
   }, []);
 
+  // Ensure page always starts from top after route change (including after scroll-lock drawer closes)
+  useEffect(() => {
+    if (!window.location.hash) {
+      const timer = setTimeout(() => {
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+      }, 20);
+      return () => clearTimeout(timer);
+    }
+  }, [activePage]);
+
   const navigateToPage = (pageId, targetId) => {
     setActivePage(pageId);
     const cleanPath = pageId === 'home' ? '/' : `/${pageId}`;
