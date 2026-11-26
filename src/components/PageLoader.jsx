@@ -10,6 +10,9 @@ export default function PageLoader() {
 
   useEffect(() => {
     let cancelled = false;
+    const initialEl = document.getElementById('initial-loader');
+    if (initialEl) initialEl.remove();
+    document.body.style.backgroundColor = '#f8fafc';
 
     const preloadUrls = [
       '/assets/images/nss-sgu-logo.webp',

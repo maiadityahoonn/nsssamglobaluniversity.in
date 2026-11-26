@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/assets/images/nss-sgu-logo-clean.webp" />
+    <link rel="preload" as="image" href="/assets/images/nss-sgu-logo.webp" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NSS - SAM Global University | Not Me, But You</title>
     <meta name="description" content="National Service Scheme (NSS) at SAM Global University Bhopal. Building a better society through service, leadership, and community action. Join the Orange Army!" />
@@ -10,8 +11,89 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+      #initial-loader {
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        background-color: #071530;
+        background-image: linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px);
+        background-size: 36px 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 16px;
+        font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      }
+      #initial-loader .il-card {
+        width: 100%;
+        max-width: 340px;
+        border-radius: 24px;
+        background: rgba(255,255,255,0.04);
+        border: 1px solid rgba(255,255,255,0.15);
+        padding: 24px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        color: #ffffff;
+      }
+      #initial-loader .il-ring-wrap {
+        position: relative;
+        width: 96px;
+        height: 96px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 14px;
+      }
+      #initial-loader .il-spin {
+        position: absolute;
+        inset: 0;
+        border-radius: 9999px;
+        border: 3px solid rgba(255,255,255,0.1);
+        border-top-color: #ff6b00;
+        border-right-color: #fbbf24;
+        animation: il-rotate 1.1s linear infinite;
+      }
+      #initial-loader .il-logo {
+        width: 76px;
+        height: 76px;
+        border-radius: 9999px;
+        object-fit: cover;
+        background: #ffffff;
+        border: 2px solid rgba(255,255,255,0.25);
+        padding: 2px;
+      }
+      #initial-loader .il-title {
+        font-size: 15px;
+        font-weight: 900;
+        letter-spacing: -0.02em;
+        margin: 0;
+      }
+      #initial-loader .il-motto {
+        font-size: 12px;
+        color: rgba(252,211,77,0.9);
+        font-style: italic;
+        font-weight: 600;
+        margin: 4px 0 0;
+      }
+      @keyframes il-rotate {
+        to { transform: rotate(360deg); }
+      }
+    </style>
   </head>
-  <body class="bg-[#f8fafc] text-slate-800 font-sans antialiased selection:bg-orange-500 selection:text-white min-h-screen overflow-x-hidden">
+  <body class="bg-[#071530] text-slate-800 font-sans antialiased selection:bg-orange-500 selection:text-white min-h-screen overflow-x-hidden">
+    <div id="initial-loader" aria-label="Loading NSS SAM Global University">
+      <div class="il-card">
+        <div class="il-ring-wrap">
+          <div class="il-spin"></div>
+          <img class="il-logo" src="/assets/images/nss-sgu-logo.webp" alt="NSS SAM Global University" />
+        </div>
+        <h1 class="il-title">NSS SAM GLOBAL UNIVERSITY</h1>
+        <p class="il-motto">&ldquo;Not Me, But You&rdquo;</p>
+      </div>
+    </div>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
