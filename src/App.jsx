@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import VideoModal from './components/VideoModal';
 import JoinModal from './components/JoinModal';
 import PageLoader from './components/PageLoader';
+import NSSBuddy from './components/NSSBuddy';
 
 // Pages
 import HomePage from './pages/HomePage';
@@ -167,6 +168,12 @@ export default function App() {
         activePage={activePage} 
         setActivePage={navigateToPage} 
         onOpenJoinModal={() => setIsJoinModalOpen(true)} 
+      />
+
+      {/* NSS Buddy Chip-Based Chatbot */}
+      <NSSBuddy
+        setActivePage={navigateToPage}
+        onOpenJoinModal={() => setIsJoinModalOpen(true)}
       />
     </div>
   );
