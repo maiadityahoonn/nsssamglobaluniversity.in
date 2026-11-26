@@ -676,7 +676,7 @@ function SpecialCampPage({ onOpenJoinModal }) {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
-              className="relative w-full max-w-2xl bg-white rounded-3xl border border-slate-200 overflow-hidden z-10 my-4 sm:my-6 max-h-[92vh] sm:max-h-[90vh] flex flex-col min-h-0"
+              className="relative w-full max-w-2xl bg-white rounded-3xl border border-slate-200 overflow-hidden z-10 my-4 sm:my-6 max-h-[80vh] sm:max-h-[90vh] flex flex-col min-h-0"
             >
               {/* Modal Header */}
               <div className="bg-slate-900 text-white px-5 sm:px-6 py-3.5 sm:py-4 flex items-center justify-between">

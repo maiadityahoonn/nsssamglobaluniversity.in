@@ -412,7 +412,7 @@ export default function ActivitiesPage({ onOpenJoinModal }) {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 15 }}
               transition={{ duration: 0.2 }}
-              className="relative w-full max-w-4xl lg:max-w-5xl bg-white rounded-2xl sm:rounded-3xl border border-slate-200 overflow-y-auto md:overflow-hidden z-10 max-h-[92vh] sm:max-h-[90vh] flex flex-col md:flex-row shadow-none min-h-0"
+              className="relative w-full max-w-4xl lg:max-w-5xl bg-white rounded-2xl sm:rounded-3xl border border-slate-200 overflow-y-auto md:overflow-hidden z-10 max-h-[80vh] sm:max-h-[90vh] flex flex-col md:flex-row shadow-none min-h-0"
             >
               {/* Mobile Top-Right Close Button */}
               <button
@@ -425,11 +425,11 @@ export default function ActivitiesPage({ onOpenJoinModal }) {
               </button>
 
               {/* Left Column: Poster Image Fully Visible with object-contain */}
-              <div className="w-full md:w-5/12 lg:w-5/12 relative bg-slate-950 flex items-center justify-center overflow-hidden shrink-0 min-h-[220px] xs:min-h-[260px] sm:min-h-[300px] md:min-h-full p-2.5 xs:p-3 sm:p-4">
+              <div className="w-full md:w-5/12 lg:w-5/12 relative bg-slate-950 flex items-center justify-center overflow-hidden shrink-0 min-h-[160px] xs:min-h-[180px] sm:min-h-[300px] md:min-h-full p-2 xs:p-2.5 sm:p-4">
                 <img loading="lazy" decoding="async"
                   src={activeModalActivity.image}
                   alt={activeModalActivity.title}
-                  className="w-full h-full max-h-[320px] sm:max-h-[380px] md:max-h-[500px] object-contain rounded-xl"
+                  className="w-full h-full max-h-[190px] xs:max-h-[220px] sm:max-h-[380px] md:max-h-[500px] object-contain rounded-xl"
                 />
               </div>
 

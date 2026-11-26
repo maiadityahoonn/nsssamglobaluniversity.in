@@ -198,7 +198,7 @@ export default function JoinModal({ isOpen, onClose }) {
           initial={{ opacity: 0, scale: 0.95, y: 15 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 15 }}
-          className="relative w-full max-w-2xl bg-white rounded-2xl sm:rounded-3xl border border-slate-200 overflow-hidden z-10 my-auto max-h-[94vh] flex flex-col"
+          className="relative w-full max-w-2xl bg-white rounded-2xl sm:rounded-3xl border border-slate-200 overflow-hidden z-10 my-auto max-h-[82vh] sm:max-h-[90vh] flex flex-col"
         >
           {/* Header */}
           <div className="bg-[#0c1f44] text-white p-3.5 xs:p-4 sm:p-5 relative flex-shrink-0 border-b border-white/10">

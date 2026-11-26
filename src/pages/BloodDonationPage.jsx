@@ -774,7 +774,7 @@ export default function BloodDonationPage({ onOpenJoinModal }) {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 15 }}
               transition={{ duration: 0.2 }}
-              className="relative w-full max-w-3xl lg:max-w-4xl bg-white rounded-2xl sm:rounded-3xl border border-slate-200 overflow-y-auto md:overflow-hidden z-10 max-h-[92vh] sm:max-h-[90vh] flex flex-col md:flex-row items-stretch shadow-none min-h-0"
+              className="relative w-full max-w-3xl lg:max-w-4xl bg-white rounded-2xl sm:rounded-3xl border border-slate-200 overflow-y-auto md:overflow-hidden z-10 max-h-[80vh] sm:max-h-[90vh] flex flex-col md:flex-row items-stretch shadow-none min-h-0"
             >
               {/* Mobile Top-Right Close Button */}
               <button
@@ -787,11 +787,11 @@ export default function BloodDonationPage({ onOpenJoinModal }) {
               </button>
 
               {/* Left Column: Full Poster Image Edge-to-Edge with object-contain */}
-              <div className="w-full md:w-[300px] lg:w-[360px] shrink-0 bg-slate-950 overflow-hidden flex items-center justify-center p-2.5 sm:p-4 min-h-[220px] xs:min-h-[260px] sm:min-h-[300px] md:min-h-full">
+              <div className="w-full md:w-[300px] lg:w-[360px] shrink-0 bg-slate-950 overflow-hidden flex items-center justify-center p-2 xs:p-2.5 sm:p-4 min-h-[160px] xs:min-h-[180px] sm:min-h-[300px] md:min-h-full">
                 <img loading="lazy" decoding="async"
                   src={selectedImage.src}
                   alt={selectedImage.title}
-                  className="w-full h-full max-h-[320px] sm:max-h-[380px] md:max-h-[480px] object-contain block select-none rounded-xl"
+                  className="w-full h-full max-h-[190px] xs:max-h-[220px] sm:max-h-[380px] md:max-h-[480px] object-contain block select-none rounded-xl"
                 />
               </div>
 
