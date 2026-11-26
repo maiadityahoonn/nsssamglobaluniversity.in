@@ -4,12 +4,21 @@ import { activitiesList } from '../data/nssData';
 
 export default function PageLoader() {
   const [isVisible, setIsVisible] = useState(true);
-  const [progress, setProgress] = useState(1);
+  const [progress, setProgress] = useState(() =>
+    typeof window !== 'undefined' && window.__nssProgress ? window.__nssProgress : 1
+  );
   const targetRef = useRef(25);
   const readyToFinishRef = useRef(false);
 
   useEffect(() => {
     let cancelled = false;
+    if (window.__nssInterval) {
+      clearInterval(window.__nssInterval);
+      window.__nssInterval = null;
+    }
+    if (window.__nssProgress) {
+      setProgress((prev) => Math.max(prev, window.__nssProgress));
+    }
     const initialEl = document.getElementById('initial-loader');
     if (initialEl) initialEl.remove();
     document.body.style.backgroundColor = '#f8fafc';
