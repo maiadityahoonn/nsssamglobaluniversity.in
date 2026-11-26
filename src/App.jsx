@@ -4,6 +4,7 @@ import BottomBar from './components/BottomBar';
 import Footer from './components/Footer';
 import VideoModal from './components/VideoModal';
 import JoinModal from './components/JoinModal';
+import PageLoader from './components/PageLoader';
 
 // Pages
 import HomePage from './pages/HomePage';
@@ -132,6 +133,7 @@ export default function App() {
 
   return (
     <div className="w-full max-w-full overflow-x-clip min-h-screen flex flex-col bg-[#f8fafc] text-slate-800">
+      <PageLoader />
       {/* Top Navbar */}
       <Navbar 
         activePage={activePage} 
